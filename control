@@ -1,0 +1,10 @@
+Package: com.phillipt.taptheat
+Name: TapTheAt
+Depends: mobilesubstrate
+Version: 0.0.1
+Icon: TapTheAt.png
+Architecture: iphoneos-arm
+Description: Hold the 'at' symbol to input your email
+Maintainer: Phillip Tennen
+Author: Phillip Tennen
+Section: Tweaks

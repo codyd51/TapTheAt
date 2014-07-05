@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = TapTheAt;
+	cell = PSLinkCell;
+	detail = TapTheAtListController;
+	icon = TapTheAt.png;
+	isController = 1;
+	label = TapTheAt;
+    };
+}
