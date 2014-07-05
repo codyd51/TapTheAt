@@ -3,6 +3,7 @@
 #import <UIKit/UIKeyboardLayoutStar.h>
 #import <UIKit/UIKeyboardInput.h>
 #import <UIKit/UITextInput.h>
+#import <AddressBook/AddressBook.h>
 
 #define kSettingsPath [NSHomeDirectory() stringByAppendingPathComponent:@"/Library/Preferences/com.phillipt.taptheat.plist"]
 
@@ -51,11 +52,11 @@ static BOOL enabled;
                 	if ([delegate respondsToSelector:@selector(selectedTextRange)]) {
 
                 		NSString* email;
-                    	if (prefs[@"email"]) {
-                    		email = prefs[@"email"];
+                    	if (!prefs[@"email"] || [prefs[@"email"] isEqualToString:@""]) {
+    							email = @"Please enter your email in Settings.";
                     	}
                     	else {
-                    		email = @"Please enter your email in Settings.";
+                    		email = prefs[@"email"];
                     	}
 
                     	[impl insertText:email];

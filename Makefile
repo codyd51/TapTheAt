@@ -3,7 +3,8 @@ include theos/makefiles/common.mk
 
 TWEAK_NAME = TapTheAt
 TapTheAt_FILES = Tweak.xm
-TapTheAt_FRAMEWORKS = UIKit
+TapTheAt_FRAMEWORKS = UIKit AddressBook AddressBookUI
+TapTheAt_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
